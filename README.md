@@ -135,10 +135,9 @@ Runs functional tests inside `./test/functional` directory.
 
 ```
 npm run lint
-npm run lint:styles
 ```
 
-Reads `.eslintrc` and `sass-lint.yml` for linting configurations.
+Reads `.eslintrc` for linting configurations.
 
 **Coverage**
 
@@ -147,4 +146,3 @@ npm run coverage
 npm run coverage:check
 ```
 
-Reads `.istanbul.yml` for thresholds in check.
