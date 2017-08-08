@@ -36,12 +36,12 @@ export default class App extends React.Component {
         return (
             <Main>
                 <DocumentMeta
-                    defaultTitle='Breko Hub'
-                    titleTemplate='%s | Breko Hub'>
+                    defaultTitle='React SSR Boilerplate'
+                    titleTemplate='%s | React SSR Boilerplate'>
                     <meta charSet='utf-8' />
                     <meta name='viewport' content='width=device-width,initial-scale=1.0' />
-                    <meta name='description' content='Breko Hub, a minimal boilerplate for building universal react applications' />
-                    <meta name='keywords' content='react,redux,react-router,koa,universal,babel,es7,hmr,webpack' />
+                    <meta name='description' content='React SSR Boilerplate' />
+                    <meta name='keywords' content='react,redux,react-router,koa,babel,es7,ssr,webpack' />
                 </DocumentMeta>
                 <HeadNavigation />
                 <FlashMessages />
