@@ -26,18 +26,18 @@ React SSR Boilerplate is a github repository that helps anyone create new JavaSc
 
 ### Prerequsits
 
-React SSR Boilerplate will only work on node version 6 and above as it is making use of Koa v2 along with polyfills for async/await syntax. To make it work on a lower version of node, the runtime compilation would need to be applied to koa and other node_modules.
+node6.0+
 
 ### Quick Start
 
 Use the following commands to get started on your new app using React SSR.
 
 ```
-git clone git@github.com:zhuowenli/React-SSR.git <directory-name>
+git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
 cd <directory-name>
-npm i
+yarn
 mv example.env .env
-npm start
+yarn dev
 ```
 
 With the default `.env` file, this will start your application in development mode on port 9001. It also provides a configuration for running the debugger with a useful console output.
@@ -69,14 +69,9 @@ React SSR Boilerplate uses the following libraries at its core:
 - [reselect](https://github.com/reactjs/reselect) - A library for creating state selectors.
 - [redux-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) - A redux middleware for creating asynchronous actions.
 
-##### Utility
-- [lodash](http://lodash.com/) - A popular modular utility library.
-- [ramda](http://ramdajs.com/) - A modular utility library focused on functional programming.
-
 ##### Styling
 - [SCSS](http://sass-lang.com/guide) - A popular CSS preprocessor.
 - [PostCSS](http://postcss.org/) - CSS transformations with JavaScript.
-- [css-modules](https://github.com/css-modules/css-modules) - A build step for modular, local scoped CSS management.
 
 ### Commands
 
