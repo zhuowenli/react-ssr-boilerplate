@@ -1,0 +1,7 @@
+{
+    "editor.tabSize": 4,
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    }
+}

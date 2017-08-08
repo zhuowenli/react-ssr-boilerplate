@@ -1,0 +1,10 @@
+coverage
+.idea
+.env
+.DS_Store
+node_modules
+src/static
+webpack-assets.json
+*.log
+*.sublime-workspace
+untracked*

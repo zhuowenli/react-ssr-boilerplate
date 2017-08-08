@@ -1,0 +1,23 @@
+{
+  "presets": [
+    ["env", { "targets": { "node": true } }],
+    "react"
+  ],
+  "plugins": [
+    "dynamic-import-node",
+    "transform-export-extensions",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "add-module-exports",
+    "babel-root-import",
+    "react-require",
+    ["provide-modules", {
+      "debug": "debug"
+    }],
+    ["module-resolver", {
+      "root": ["./src"]
+    }],
+    ["jsx-fragment", { "tagName": "Ø" }]
+  ]
+}

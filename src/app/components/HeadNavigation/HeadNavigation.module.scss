@@ -1,0 +1,16 @@
+@import '~vars';
+@import '~tao-scss/index';
+
+.nav a {
+  color: $link-color;
+  margin-right: rem(10px);
+  text-decoration: none;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}
+
+a.active {
+  color: $active-color;
+}
