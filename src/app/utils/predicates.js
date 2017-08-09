@@ -1,3 +1,11 @@
+/*
+ * @Author: 卓文理
+ * @Email: 531840344@qq.com
+ * @Date: 2017-08-09 10:02:02
+ */
+
+'use strict';
+
 import is_promise from 'is-promise';
 import { contains } from 'ramda';
 
