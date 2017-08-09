@@ -16,13 +16,9 @@
     "build": "scripty",
     "lint": "eslint src scripts test --ext .js",
     "coverage": "scripty",
-    "coverage:check": "babel-istanbul check-coverage"
+    "coverage:check": "babel-istanbul check-coverage",
+    "deps_checker": "node scripts/deps_checker.js js ./package.json '(^\\.[\\s\\S]+|^dist|node_modules)'"
   },
-  "pre-push": [
-    "lint",
-    "test:unit",
-    "test:func"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/zhuowenli/react-ssr-boilerplate.git"
@@ -95,7 +91,6 @@
     "koa-convert": "^1.2.0",
     "koa-favicon": "^2.0.0",
     "koa-logger": "^3.0.0",
-    "koa-mount": "^3.0.0",
     "koa-router": "7.2.1",
     "koa-session-store": "^2.0.0",
     "koa-static": "^4.0.0",
@@ -128,7 +123,6 @@
     "socket.io-client": "^2.0.1",
     "style-loader": "^0.18.0",
     "styled-components": "^2.1.2",
-    "tao-scss": "~0.4.1",
     "type-to-reducer": "^1.0.3",
     "url-loader": "~0.5.8",
     "uuid": "^3.0.1",
@@ -148,7 +142,6 @@
     "chai-jest-snapshot": "^1.0.0",
     "chai-shallow-deep-equal": "^1.4.6",
     "cheerio": "^1.0.0-rc.2",
-    "co": "~4.6.0",
     "enzyme": "^2.8.2",
     "enzyme-to-json": "^1.5.1",
     "eslint": "^4.0.0",
@@ -160,15 +153,11 @@
     "mocha": "^3.4.2",
     "mocha-loader": "^1.1.1",
     "node-hook-filename": "^0.3.2",
-    "node-mocks-http": "^1.6.2",
     "open": "~0.0.5",
-    "pre-push": "^0.1.1",
-    "react-addons-test-utils": "^15.5.1",
-    "react-test-renderer": "^15.5.4",
+    "react-test-renderer": "^15.6.1",
     "react-transform-catch-errors": "^1.0.2",
     "react-transform-hmr": "^1.0.4",
     "redbox-react": "^1.4.0",
-    "sass-lint": "^1.10.2",
     "scripty": "^1.7.1",
     "sinon": "^2.3.2",
     "sinon-chai": "^2.10.0",

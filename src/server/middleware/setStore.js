@@ -22,10 +22,9 @@ export default async function setStore(ctx, next) {
     }
 
     log('setting server store');
-    // make a clean history for each request
+
     ctx.history = createStaticHistory(ctx.request.url);
 
-    // make a clean store for each request
     ctx.store = makeCreateStore([
         ...middleware,
         routerMiddleware(ctx.history),

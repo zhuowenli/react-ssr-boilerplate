@@ -1,9 +1,8 @@
 @import '~vars';
-@import '~tao-scss/index';
 
 .nav a {
   color: $link-color;
-  margin-right: rem(10px);
+  margin-right: 10px;
   text-decoration: none;
 
   &:last-of-type {
