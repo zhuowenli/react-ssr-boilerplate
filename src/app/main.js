@@ -11,11 +11,10 @@ import { ConnectedRouter, routerMiddleware } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import { inClientViaSocketIO } from 'redux-via-socket.io';
 
-import { middleware, sagaMiddleware } from 'app/composition/middleware';
-import { makeCreateStore } from 'app/composition/makeCreateStore';
-import socket from 'app/composition/socket';
+import { middleware } from './composition/middleware';
+import { makeCreateStore } from './composition/makeCreateStore';
+import socket from './composition/socket';
 
-import rootSaga from 'app/sagas';
 import { isBrowser } from 'app/utils';
 import rootReducer from 'app/reducers';
 import * as app from 'app';
@@ -30,8 +29,6 @@ export const store = makeCreateStore(
 )(rootReducer, isBrowser ? window.__INITIAL_STATE__ : {});
 
 inClientViaSocketIO(socket, store.dispatch);
-
-sagaMiddleware.run(rootSaga);
 
 export const Main = (
     <Provider store={store}>

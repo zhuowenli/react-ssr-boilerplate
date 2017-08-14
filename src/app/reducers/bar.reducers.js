@@ -6,11 +6,11 @@
 
 'use strict';
 
+import typeToReducer from 'type-to-reducer';
 import { PENDING, REJECTED, FULFILLED } from 'redux-promise-middleware';
-import { typeToReducer, get } from 'app/utils';
 import { API_FETCH } from 'app/actions/types';
 
-const getBar = get('payload.bar');
+const getBar = state => state.payload.bar;
 
 const initialState = {
     isPending: false,

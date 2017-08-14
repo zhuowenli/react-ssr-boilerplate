@@ -11,7 +11,6 @@ import { connect } from 'react-redux';
 import DocumentMeta from 'react-helmet';
 import styled from 'styled-components';
 import * as barActions from '../../actions/bar.actions';
-import { get } from 'app/utils';
 
 const Block = styled.div`
     background-color: #ddd;
@@ -20,7 +19,7 @@ const Block = styled.div`
 `;
 
 @connect(state => ({
-    bar: get('bar.data')(state),
+    bar: state.bar.data,
 }), barActions)
 
 export default class BarRoute extends Component {

@@ -9,7 +9,6 @@
 import router from 'koa-router';
 import compose from 'koa-compose';
 import setStore from './middleware/setStore';
-import flashMessages from './middleware/flashMessages';
 import renderApp from './middleware/renderApp';
 import apiRouter from './api';
 
@@ -25,8 +24,6 @@ export function setRoutes(assets) {
     const renderReactApp = compose([
         /* set a store for server side state rendering */
         setStore,
-        /* wire up flashMessages from redirect to server store */
-        flashMessages,
         /* give assets from bundle, set response body from react app */
         renderApp(assets),
     ]);

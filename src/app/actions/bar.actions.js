@@ -6,12 +6,12 @@
 
 'use strict';
 
-import { request } from 'app/utils';
+import fetch from '../utils/request';
 import { API_FETCH } from 'app/actions/types';
 
 export const apiFetch = () => ({
     type: API_FETCH,
     payload: {
-        promise: request.fetch('/api/bar'),
+        promise: fetch('/api/bar'),
     },
 });

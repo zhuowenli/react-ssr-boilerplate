@@ -6,12 +6,8 @@
 
 'use strict';
 
+import { filter, identity } from 'ramda';
+
 export { isNodeInTree, isPromise, hasWindow, isBrowser, isEnv } from './predicates';
+export const compact = filter(identity);
 
-export { compact } from './helpers';
-
-export get from './get';
-
-export typeToReducer from 'type-to-reducer';
-
-export * as request from './request';

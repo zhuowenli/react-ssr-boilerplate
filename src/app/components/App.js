@@ -11,7 +11,6 @@ import DocumentMeta from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
 import HeadNavigation from 'app/components/HeadNavigation/HeadNavigation';
-import FlashMessages from '../components/@FlashMessages/FlashMessages';
 import Home from '../views/home';
 import Bar from '../views/bar';
 import Oops from '../views/oops';
@@ -36,7 +35,6 @@ export default class App extends Component {
                     <meta name='keywords' content='react,redux,react-router,koa,babel,es7,ssr,webpack' />
                 </DocumentMeta>
                 <HeadNavigation />
-                <FlashMessages />
                 <h1>React SSR</h1>
                 <Content>
                     <Switch>
