@@ -107,6 +107,9 @@ export const babelLoaderConfig = {
                 'debug': 'debug',
             } ],
             'babel-root-import',
+            [ 'styled-components', {
+                'ssr': true,
+            } ],
         ],
     },
 };

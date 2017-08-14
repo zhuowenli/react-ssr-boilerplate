@@ -123,6 +123,7 @@
     "babel-istanbul": "^0.12.2",
     "babel-plugin-react-require": "^3.0.0",
     "babel-plugin-react-transform": "^2.0.2",
+    "babel-plugin-styled-components": "^1.1.7",
     "chai": "^4.0.1",
     "chai-as-promised": "^7.0.0",
     "chai-enzyme": "^0.8.0",

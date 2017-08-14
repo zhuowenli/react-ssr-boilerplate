@@ -19,11 +19,10 @@ log('Environment', process.env);
 
 socket.on('connect', () => {
     log('Client connected to socket');
-    // example socket broadcast
+
     store.dispatch({
         type: 'NEW_SOCKET_SESSION',
         payload: { data: Math.random() },
-        // next=false prevents the local dispatch
         meta: { broadcast: true, next: false },
     });
 });

@@ -17,6 +17,9 @@
     }],
     ["module-resolver", {
       "root": ["./src"]
+    }],
+    ["styled-components", {
+      "ssr": true
     }]
   ]
 }
