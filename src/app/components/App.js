@@ -10,7 +10,7 @@ import { Component } from 'react';
 import DocumentMeta from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
-import HeadNavigation from 'app/components/HeadNavigation/HeadNavigation';
+import HeadNavigation from 'app/components/HeadNavigation/nav';
 import Home from '../views/home';
 import Bar from '../views/bar';
 import Oops from '../views/oops';
