@@ -2,9 +2,6 @@
   "name": "react-ssr-boilerplate",
   "version": "0.1.0",
   "description": "React SSR Boilerplate",
-  "moduleRoots": [
-    "src"
-  ],
   "scripts": {
     "test": "scripty",
     "test:server": "scripty",
@@ -32,8 +29,6 @@
     "koa",
     "react-rouer",
     "es7",
-    "universal",
-    "hmr",
     "babel-transforms",
     "webpack"
   ],
@@ -41,10 +36,6 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhuowenli/react-ssr-boilerplate/issues"
-  },
-  "engines": {
-    "node": "~8.0",
-    "npm": "~5.0"
   },
   "homepage": "https://github.com/zhuowenli/react-ssr-boilerplate#readme",
   "dependencies": {
