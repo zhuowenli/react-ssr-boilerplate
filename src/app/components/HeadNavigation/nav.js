@@ -9,8 +9,6 @@
 import { Component } from 'react';
 import { StyledLink } from './nav.styled';
 
-// Putting this inside a connect will break activeClassName
-// unless you also subscribe to changes to routing state or context
 export default class HeadNavigation extends Component {
     render() {
         return (
