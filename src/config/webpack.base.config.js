@@ -107,8 +107,6 @@ export const babelLoaderConfig = {
                 'debug': 'debug',
             } ],
             'babel-root-import',
-            // ALT+SHIFT+o = Ø
-            [ 'jsx-fragment', { 'tagName': 'Ø' } ],
         ],
     },
 };

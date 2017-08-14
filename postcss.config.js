@@ -12,5 +12,11 @@ module.exports = {
             'browsers': [ 'last 2 versions' ],
         }),
         require('cssnano'),
+        require('postcss-pxtorem')({
+            rootValue: 32,
+            selectorBlackList: [ 'html' ],
+            minPixelValue: 1,
+            propWhiteList: [ '*' ],
+        }),
     ],
 };

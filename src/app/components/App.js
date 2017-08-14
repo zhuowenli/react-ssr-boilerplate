@@ -6,9 +6,9 @@
 
 'use strict';
 
+import { Component } from 'react';
 import DocumentMeta from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
-import styled from 'styled-components';
 
 import HeadNavigation from 'app/components/HeadNavigation/HeadNavigation';
 import FlashMessages from '../components/@FlashMessages/FlashMessages';
@@ -17,19 +17,11 @@ import Bar from '../views/bar';
 import Oops from '../views/oops';
 import Private from '../views/private';
 import NotFound from '../views/oops/404';
-
-const Main = styled.div`
-    color: #444;
-    font-size: 17px;
-`;
-
-const Content = styled.main`
-    padding: 5px;
-`;
+import { Main, Content } from './App.styled';
 
 const log = debug('App.js');
 
-export default class App extends React.Component {
+export default class App extends Component {
     render() {
         log('render');
 

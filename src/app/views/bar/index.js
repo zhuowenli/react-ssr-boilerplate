@@ -6,6 +6,7 @@
 
 'use strict';
 
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import DocumentMeta from 'react-helmet';
 import styled from 'styled-components';
@@ -22,7 +23,7 @@ const Block = styled.div`
     bar: get('bar.data')(state),
 }), barActions)
 
-export default class BarRoute extends React.Component {
+export default class BarRoute extends Component {
   static defaultProps = {
       bar: [],
   };

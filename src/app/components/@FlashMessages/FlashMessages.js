@@ -6,6 +6,7 @@
 
 'use strict';
 
+import { Component } from 'react';
 import { connect } from 'react-redux';
 import { noop } from 'lodash';
 import PropTypes from 'prop-types';
@@ -18,7 +19,7 @@ import Msg from './Msg';
     messages: flashSelectors.getMessages(state),
 }), { removeMessage })
 
-export default class FlashMessages extends React.Component {
+export default class FlashMessages extends Component {
     static propTypes = {
         messages: PropTypes.array,
         removeMessage: PropTypes.func,

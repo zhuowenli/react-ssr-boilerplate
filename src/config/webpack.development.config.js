@@ -28,7 +28,7 @@ export default {
     ],
     module: {
         rules: [ ...webpackConfig.module.rules, {
-            test: /module\.s(a|c)ss$/,
+            test: /module\.(sass|scss)$/,
             include: [ SRC ],
             // not extracting css-modules in development for hot-reloading
             use: [
@@ -40,9 +40,9 @@ export default {
                     options: { outputStyle: 'expanded' } },
             ],
         }, {
-            test: /\.s(a|c)ss$/,
+            test: /\.(sass|scss)$/,
             include: [ SRC ],
-            exclude: /module\.(sa|sc|c)ss$/,
+            exclude: /module\.(sass|scss)$/,
             loader: ExtractTextPlugin.extract({
                 fallback: 'style-loader',
                 use: [

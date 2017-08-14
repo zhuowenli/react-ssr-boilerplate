@@ -6,11 +6,12 @@
 
 'use strict';
 
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Router } from 'react-router-dom';
 import createStaticHistory from 'server/utils/createStaticHistory';
 
-class StaticRouter extends React.Component {
+class StaticRouter extends Component {
     static propTypes = {
         history: PropTypes.object,
     }

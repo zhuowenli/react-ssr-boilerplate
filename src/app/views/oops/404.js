@@ -6,7 +6,9 @@
 
 'use strict';
 
-export default class NotFound extends React.Component {
+import { Component } from 'react';
+
+export default class NotFound extends Component {
     render() {
         return (
             <section className='NotFoundRoute'>

@@ -6,12 +6,13 @@
 
 'use strict';
 
+import { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './HeadNavigation.module.scss';
 
 // Putting this inside a connect will break activeClassName
 // unless you also subscribe to changes to routing state or context
-export default class HeadNavigation extends React.Component {
+export default class HeadNavigation extends Component {
     render() {
         const { ...props } = this.props;
         return (

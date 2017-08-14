@@ -5,8 +5,9 @@
  */
 
 'use strict';
+import { Component } from 'react';
 
-export default class OopsRoute extends React.Component {
+export default class OopsRoute extends Component {
     render() {
         return (
             <section className='OopsRoute'>
