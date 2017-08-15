@@ -16,7 +16,7 @@ function stripUnit(value) {
     return unitlessValue;
 }
 
-export default function(pxval, base = '32px') {
+export default function(pxval, base = '16px') {
     if (typeof pxval === 'string') {
         if(!endsWith(pxval, 'px')) {
             throw new Error(
