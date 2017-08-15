@@ -33,7 +33,9 @@ node6.0+
 1. install Node.js
 2. install Redis and PostgreSQL
 3. create postgres database:
-    { database: 'server', owner: 'postgres', password: '123' }
+
+    `{ database: 'server', owner: 'postgres', password: '123', host: '127.0.0.1' }`
+
 4. clone and start this project
 
     ```
