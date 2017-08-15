@@ -7,7 +7,7 @@
 'use strict';
 
 import rimraf from 'rimraf';
-import { ASSET_FILE } from '../config/paths';
+import { ASSET_FILE } from '../../config/paths';
 import { isEnv } from '../app/utils/predicates';
 
 const log = debug('clean-assets');

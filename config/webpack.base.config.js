@@ -9,7 +9,7 @@
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CleanPlugin from 'clean-webpack-plugin';
-import { SRC, APP, STATIC, CONFIG, STYLES, SERVER, ROOT } from 'config/paths';
+import { SRC, APP, STATIC, CONFIG, STYLES, SERVER, ROOT } from './paths';
 import { isomorphicPlugin } from 'server/isomorphicTools';
 
 export default {

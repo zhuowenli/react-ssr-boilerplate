@@ -12,10 +12,10 @@ import convert from 'koa-convert';
 import session from 'koa-session-store';
 import logger from 'koa-logger';
 import favicon from 'koa-favicon';
-import { ASSETS } from 'config/paths';
-import sessionFlashArray from 'server/middleware/sessionFlashArray';
-import handleError from 'server/middleware/handleError';
 import compressible from 'compressible';
+import sessionFlashArray from './server/middleware/sessionFlashArray';
+import handleError from './server/middleware/handleError';
+import { ASSETS } from '../config/paths';
 
 const app = new Koa();
 

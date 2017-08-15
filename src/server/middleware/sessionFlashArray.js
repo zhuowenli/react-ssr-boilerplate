@@ -6,7 +6,6 @@
 
 'use strict';
 
-
 export default function(key='flash') {
     return async function sessionFlashArray(ctx, next) {
         ctx.flash = ctx.session[key] || [];

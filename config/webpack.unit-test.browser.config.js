@@ -11,8 +11,8 @@ import path from 'path';
 import glob from 'glob';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import webpackConfig, { babelLoaderConfig } from 'config/webpack.base.config';
-import { TESTS, ROOT } from 'config/paths';
+import webpackConfig, { babelLoaderConfig } from './webpack.base.config';
+import { TESTS, ROOT } from './paths';
 import { isomorphicPlugin } from 'server/isomorphicTools';
 
 export default {

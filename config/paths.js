@@ -8,7 +8,7 @@
 
 import path from 'path';
 
-export const ROOT = path.join(__dirname, '..', '..');
+export const ROOT = path.join(__dirname, '..');
 export const SRC = path.join(ROOT, 'src');
 export const TESTS = path.join(ROOT, 'test');
 export const APP = path.join(SRC, 'app');

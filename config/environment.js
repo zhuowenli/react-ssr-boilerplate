@@ -8,7 +8,7 @@
 
 /* eslint-disable no-console */
 import loadEnv from 'node-env-file';
-import { ROOT } from 'config/paths';
+import { ROOT } from './paths';
 
 loadEnv(`${ROOT}/.env`, { raise: false });
 

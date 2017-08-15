@@ -6,18 +6,18 @@
 
 'use strict';
 
-import 'config/environment';
-import 'helpers/cssModulesHook';
-import 'helpers/cleanAssetJson';
+import '../config/environment';
+import './helpers/cssModulesHook';
+import './helpers/cleanAssetJson';
 import { argv } from 'yargs';
 import http from 'http';
 import serve from 'koa-static';
 import open from 'open';
-import hotReload from 'helpers/hotReload';
-import { isEnv } from 'app/utils';
-import { ROOT, SERVER, SOCKETS, STATIC } from 'config/paths';
-import { isomorphicTools, isomorphicPlugin } from 'server/isomorphicTools';
+import hotReload from './helpers/hotReload';
+import { isEnv } from './app/utils';
+import { isomorphicTools, isomorphicPlugin } from './server/isomorphicTools';
 import app from 'server-instance';
+import { ROOT, SERVER, SOCKETS, STATIC } from '../config/paths';
 
 const log = debug('app');
 

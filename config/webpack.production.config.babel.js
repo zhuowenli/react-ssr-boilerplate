@@ -6,12 +6,12 @@
 
 'use strict';
 
-import 'config/environment';
+import './environment';
 import 'helpers/cleanAssetJson';
 import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import webpackConfig, { babelLoaderConfig } from 'config/webpack.base.config';
-import { APP, STYLES } from 'config/paths';
+import webpackConfig, { babelLoaderConfig } from './webpack.base.config';
+import { APP, STYLES } from './paths';
 
 export default {
     ...webpackConfig,

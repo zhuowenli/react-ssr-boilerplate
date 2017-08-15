@@ -1,10 +1,18 @@
+/*
+ * @Author: 卓文理
+ * @Email: 531840344@qq.com
+ * @Date: 2017-08-15 14:27:04
+ */
+
+'use strict';
+
 import chokidar from 'chokidar';
 import webpack from 'webpack';
 import R from 'ramda';
-import webpackDevelopmentConfig from 'config/webpack.development.config';
-import { isomorphicTools } from 'server/isomorphicTools';
 import koaWebpack from 'koa-webpack';
-import { SERVER } from 'config/paths';
+import { isomorphicTools } from '../server/isomorphicTools';
+import webpackDevelopmentConfig from '../../config/webpack.development.config';
+import { SERVER } from '../../config/paths';
 
 const log = {
     hot: debug('hot-reload'),
