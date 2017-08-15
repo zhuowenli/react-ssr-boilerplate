@@ -9,6 +9,7 @@
 import { STATUS_CODES } from 'http';
 import router from 'koa-router';
 import koaBody from 'koa-body';
+import { fetchArticles } from './articles';
 
 const parseBody = koaBody();
 const apiRouter = router({ prefix: '/api' });
@@ -19,6 +20,9 @@ apiRouter
     })
     .get('bar', '/bar', (ctx) => {
         ctx.response.body = { bar: [ 'bruce', 'willis', 'wet', 'himself' ] };
+    })
+    .get('article', '/articles', async ctx => {
+        ctx.response.body = await fetchArticles(ctx.query);
     })
     .all('not-found', '*', (ctx) => {
         ctx.response.status = 404;

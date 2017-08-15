@@ -9,8 +9,10 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { barReducers as bar } from './bar.reducers';
+import homeReducer from './home';
 
 export default combineReducers({
     bar,
+    homeReducer,
     routing: routerReducer,
 });

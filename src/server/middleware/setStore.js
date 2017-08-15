@@ -11,6 +11,7 @@ import { makeCreateStore } from '../../app/composition/makeCreateStore';
 import { middleware } from '../../app/composition/middleware';
 import rootReducer from '../../app/reducers';
 import createStaticHistory from '../utils/createStaticHistory';
+import { fetchArticles } from '../api/articles';
 
 const log = debug('set-store');
 
@@ -19,6 +20,10 @@ export default async function setStore(ctx, next) {
 
     if (/^\/bar/.test(ctx.request.url)) {
         preloadedReducer.bar = { data: [ 'bruce', 'willis', 'wet', 'himself' ] };
+    }
+
+    if (ctx.request.url === '/') {
+        preloadedReducer.homeReducer = await fetchArticles(ctx.query);
     }
 
     log('setting server store');

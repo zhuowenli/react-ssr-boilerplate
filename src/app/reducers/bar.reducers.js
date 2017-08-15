@@ -8,9 +8,7 @@
 
 import typeToReducer from 'type-to-reducer';
 import { PENDING, REJECTED, FULFILLED } from 'redux-promise-middleware';
-import { API_FETCH } from 'app/actions/types';
-
-const getBar = state => state.payload.bar;
+import { API_FETCH } from '../actions/types';
 
 const initialState = {
     isPending: false,
@@ -28,9 +26,9 @@ export const barReducers = typeToReducer({
             ...initialState,
             error: action.payload,
         }),
-        [ FULFILLED ]: (state, action) => ({
+        [ FULFILLED ]: (state, { payload }) => ({
             ...initialState,
-            data: getBar(action),
+            data: payload.bar,
         }),
     },
 }, initialState);

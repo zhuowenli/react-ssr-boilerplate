@@ -6,7 +6,7 @@
 
 'use strict';
 
-
+export const FETCH_ARTICLES = 'home/FETCH_ARTICLES';
 export const API_FETCH = 'bar/API_FETCH';
 
 export const REMOVE_MESSAGE = 'flash/REMOVE_MESSAGE';

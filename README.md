@@ -51,35 +51,6 @@ Node.js.0+、Redis、PostgreSQL
 
 5. Open a browser window at `localhost:9001`.
 
-### Libraries
-
-React SSR Boilerplate uses the following libraries at its core:
-
-##### Build tools
-- [webpack](https://webpack.github.io/) - A module bundler.
-- [babel](http://babeljs.io/) - A JavaScript compiler.
-- [webpack-isomorphic-tools](https://www.npmjs.com/package/webpack-isomorphic-tools) - Library for isomorphic rendering.
-
-##### Server
-- [koa](http://koajs.com/) - A lightweight server framework.
-- [koa-router](https://github.com/alexmingoia/koa-router) - Router middleware for koa.
-- [socket.io](http://socket.io/) - A node engine for WebSocket communication.
-- [redux-via-socket.io](https://www.npmjs.com/package/redux-via-socket.io) - An adapter for sharing redux actions over WebSockets.
-
-##### Universal Application
-- [react](http://facebook.github.io/react/) - A library for building interfaces.
-- [redux](http://redux.js.org/) - A library for state management.
-- [react-router](https://github.com/reactjs/react-router) - A routing library for React.
-- [react-router-redux](https://github.com/reactjs/react-router-redux) - Binding between react-router and redux.
-- [redial](https://www.npmjs.com/package/redial) - Universal data fetching for React.
-- [redux-saga](https://github.com/yelouafi/redux-saga) - Side effect management for redux.
-- [reselect](https://github.com/reactjs/reselect) - A library for creating state selectors.
-- [redux-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) - A redux middleware for creating asynchronous actions.
-
-##### Styling
-- [SCSS](http://sass-lang.com/guide) - A popular CSS preprocessor.
-- [PostCSS](http://postcss.org/) - CSS transformations with JavaScript.
-
 ### Commands
 
 **Developing**
@@ -148,3 +119,46 @@ npm run coverage
 npm run coverage:check
 ```
 
+### Console
+
+```bash
+$ yarn console
+
+# insert users table
+> models.User.create({name: '张三', email: '123456@qq.com', password: '12345678', passwordConfirmation: '12345678'})
+
+# search users table
+> models.User.findOne({ where: { email: '123456@qq.com' } }).then(user => console.log(user.dataValues))
+
+# insert articles table
+> models.Article.create({title: 'Hello world!', content: '这是一条通过console插入的数据', userId: 1, description: '相关描述'})
+```
+
+### Libraries
+
+React SSR Boilerplate uses the following libraries at its core:
+
+##### Build tools
+- [webpack](https://webpack.github.io/) - A module bundler.
+- [babel](http://babeljs.io/) - A JavaScript compiler.
+- [webpack-isomorphic-tools](https://www.npmjs.com/package/webpack-isomorphic-tools) - Library for isomorphic rendering.
+
+##### Server
+- [koa](http://koajs.com/) - A lightweight server framework.
+- [koa-router](https://github.com/alexmingoia/koa-router) - Router middleware for koa.
+- [socket.io](http://socket.io/) - A node engine for WebSocket communication.
+- [redux-via-socket.io](https://www.npmjs.com/package/redux-via-socket.io) - An adapter for sharing redux actions over WebSockets.
+
+##### Universal Application
+- [react](http://facebook.github.io/react/) - A library for building interfaces.
+- [redux](http://redux.js.org/) - A library for state management.
+- [react-router](https://github.com/reactjs/react-router) - A routing library for React.
+- [react-router-redux](https://github.com/reactjs/react-router-redux) - Binding between react-router and redux.
+- [redial](https://www.npmjs.com/package/redial) - Universal data fetching for React.
+- [redux-saga](https://github.com/yelouafi/redux-saga) - Side effect management for redux.
+- [reselect](https://github.com/reactjs/reselect) - A library for creating state selectors.
+- [redux-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) - A redux middleware for creating asynchronous actions.
+
+##### Styling
+- [SCSS](http://sass-lang.com/guide) - A popular CSS preprocessor.
+- [PostCSS](http://postcss.org/) - CSS transformations with JavaScript.
