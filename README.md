@@ -26,7 +26,7 @@ React SSR Boilerplate is a github repository that helps anyone create new JavaSc
 
 ### Prerequsits
 
-node6.0+
+Node.js.0+、Redis、PostgreSQL
 
 ### Quick Start
 
