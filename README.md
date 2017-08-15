@@ -30,19 +30,24 @@ node6.0+
 
 ### Quick Start
 
-Use the following commands to get started on your new app using React SSR.
+1. install Node.js
+2. install Redis and PostgreSQL
+3. create postgres database:
+    { database: 'server', owner: 'postgres', password: '123' }
+4. clone and start this project
 
-```
-git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
-cd <directory-name>
-yarn
-mv example.env .env
-yarn dev
-```
+    ```
+    git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
+    cd <directory-name>
+    yarn
+    mv example.env .env
+    yarn db:migrate
+    yarn dev
+    ```
 
-With the default `.env` file, this will start your application in development mode on port 9001. It also provides a configuration for running the debugger with a useful console output.
+    With the default `.env` file, this will start your application in development mode on port 9001. It also provides a configuration for running the debugger with a useful console output.
 
-Open a browser window at `localhost:9001`.
+5. Open a browser window at `localhost:9001`.
 
 ### Libraries
 
