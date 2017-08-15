@@ -20,18 +20,13 @@ export function setRoutes(assets) {
 
     rootRouter.stack.length = 0;
 
-    /* build app from routes, set initial state and set response html */
     const renderReactApp = compose([
-        /* set a store for server side state rendering */
         setStore,
-        /* give assets from bundle, set response body from react app */
         renderApp(assets),
     ]);
 
     rootRouter
         .use(apiRouter.routes())
-        /* render error page when problem found */
         .get('error', '/oops', renderReactApp)
-        /* render react app for all other routes */
         .get('react', '/(.*)', renderReactApp);
 }

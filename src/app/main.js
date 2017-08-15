@@ -15,9 +15,9 @@ import { middleware } from './composition/middleware';
 import { makeCreateStore } from './composition/makeCreateStore';
 import socket from './composition/socket';
 
-import { isBrowser } from 'app/utils';
-import rootReducer from 'app/reducers';
-import * as app from 'app';
+import { isBrowser } from './utils';
+import rootReducer from './reducers';
+import { createAppInstance } from './';
 
 // client store and history
 // can go out of sync with server store and server history...
@@ -33,7 +33,7 @@ inClientViaSocketIO(socket, store.dispatch);
 export const Main = (
     <Provider store={store}>
         <ConnectedRouter history={history}>
-            {app.createAppInstance()}
+            {createAppInstance()}
         </ConnectedRouter>
     </Provider>
 );
