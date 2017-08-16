@@ -148,16 +148,15 @@ React SSR Boilerplate uses the following libraries at its core:
 - [koa-router](https://github.com/alexmingoia/koa-router) - Router middleware for koa.
 - [socket.io](http://socket.io/) - A node engine for WebSocket communication.
 - [redux-via-socket.io](https://www.npmjs.com/package/redux-via-socket.io) - An adapter for sharing redux actions over WebSockets.
+- [Sequelize](http://docs.sequelizejs.com/) - Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
 
 ##### Universal Application
 - [react](http://facebook.github.io/react/) - A library for building interfaces.
 - [redux](http://redux.js.org/) - A library for state management.
 - [react-router](https://github.com/reactjs/react-router) - A routing library for React.
 - [react-router-redux](https://github.com/reactjs/react-router-redux) - Binding between react-router and redux.
-- [redial](https://www.npmjs.com/package/redial) - Universal data fetching for React.
-- [redux-saga](https://github.com/yelouafi/redux-saga) - Side effect management for redux.
-- [reselect](https://github.com/reactjs/reselect) - A library for creating state selectors.
 - [redux-promise-middleware](https://github.com/pburtchaell/redux-promise-middleware) - A redux middleware for creating asynchronous actions.
+- [styled-components](https://www.styled-components.com/) - Visual primitives for the component age. Use the best bits of ES6 and CSS to style your apps without stress 💅
 
 ##### Styling
 - [SCSS](http://sass-lang.com/guide) - A popular CSS preprocessor.

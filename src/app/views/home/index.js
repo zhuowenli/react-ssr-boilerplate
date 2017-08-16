@@ -10,6 +10,8 @@ import { Component } from 'react';
 import { connect } from 'react-redux';
 import * as action from '../../actions/home';
 
+const log = debug('home');
+
 @connect(({ homeReducer }) => ({
     data: homeReducer.data,
     metadata: homeReducer.metadata,
@@ -22,7 +24,8 @@ export default class Home extends Component {
     };
 
     componentDidMount() {
-        this.props.fetchArticles();
+        this.props.fetchArticles()
+            .then(({ data }) => log(data));
     }
 
     render() {
