@@ -60,7 +60,6 @@
     "babel-register": "^6.24.1",
     "babel-root-import": "^4.1.8",
     "babel-runtime": "^6.23.0",
-    "bcrypt": "^1.0.2",
     "chokidar": "^1.7.0",
     "clean-webpack-plugin": "^0.1.16",
     "compressible": "^2.0.10",

@@ -6,7 +6,7 @@
 
 'use strict';
 
-import bcrypt from 'bcrypt';
+import crypto from 'crypto';
 
 export default function(sequelize, DataTypes) {
     const User = sequelize.define('User', {
@@ -63,23 +63,19 @@ export default function(sequelize, DataTypes) {
         User.hasMany(models.Article, { foreignKey: 'user_id' });
     };
 
-    User.prototype.authenticate = function(value) {
-        if (bcrypt.compareSync(value, this.passwordDigest)) {
-            return this;
-        } else{
-            return false;
-        }
-    };
-
     function hasSecurePassword(user) {
         if (user.password != user.passwordConfirmation) {
             return sequelize.Promise.reject(
                 new Error('Password confirmation doesn\'t match Password')
             );
         }
-        return bcrypt.hash(user.password, 10).then(function(hash) {
-            user.passwordDigest = hash;
-        });
+
+        const salt = 'abcdefghijklmnopqrstuvwxyz';
+        const hash = crypto.pbkdf2Sync(user.password, salt, 4096, 60);
+
+        user.passwordDigest = hash.toString('hex');
+
+        return sequelize.Promise.resolve(user);
     }
 
     User.beforeCreate((user) => {

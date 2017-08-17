@@ -6,10 +6,6 @@
 
 'use strict';
 
-require('babel-polyfill');
-require('babel-register');
-require('./environment');
-
 module.exports = {
     username: process.env.DATABASE_USERNAME || 'postgres',
     password: process.env.DATABASE_PASSWORD || '123',
