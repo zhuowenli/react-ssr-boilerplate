@@ -6,7 +6,7 @@
 
 'use strict';
 
-import fetch from '../utils/request';
+import { fetch } from '../utils/request';
 import { API_FETCH } from 'app/actions/types';
 
 export const apiFetch = () => ({

@@ -7,7 +7,9 @@
 'use strict';
 
 import { filter, identity } from 'ramda';
+import request from './request';
 
 export { isNodeInTree, isPromise, hasWindow, isBrowser, isEnv } from './predicates';
 export const compact = filter(identity);
+export const fetch = request;
 

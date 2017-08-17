@@ -153,7 +153,7 @@
     "scripty": "^1.7.1",
     "sequelize": "^4.4.9",
     "sequelize-cli": "^2.8.0",
-    "sinon": "^2.3.2",
+    "sinon": "^2.4.1",
     "sinon-chai": "^2.10.0",
     "skin-deep": "^1.0.0",
     "supertest": "^3.0.0",

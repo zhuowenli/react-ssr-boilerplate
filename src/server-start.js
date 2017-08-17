@@ -32,8 +32,10 @@ if (isEnv('development')) {
 if (process.argv[2] && process.argv[2][0] == 'c') {
 
     const repl = require('repl');
+    const crypto = require('crypto');
 
     global.models = models;
+    global.crypto = crypto;
 
     repl.start({
         prompt: '> ',

@@ -6,7 +6,7 @@
 
 'use strict';
 
-import fetch from '../utils/request';
+import { fetch } from '../utils/request';
 import { FETCH_ARTICLES } from '../actions/types';
 
 export const fetchArticles = (page = 1) => {

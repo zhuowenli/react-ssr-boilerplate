@@ -10,7 +10,7 @@ import 'isomorphic-fetch';
 import debug from 'debug';
 const log = debug('utils.request');
 
-export default async(endpoint, options) => {
+export async function fetch(endpoint, options) {
     log('requesting', endpoint);
     const response = await (global || window).fetch(endpoint, options);
     log('respsonse', { endpoint, status: response.status });
@@ -28,4 +28,6 @@ export default async(endpoint, options) => {
     return ~contentType.indexOf('application/json')
         ? response.json()
         : response.text();
-};
+}
+
+// export default fetch;

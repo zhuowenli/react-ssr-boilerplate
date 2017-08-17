@@ -89,5 +89,6 @@ export default function(sequelize, DataTypes) {
             return hasSecurePassword(user);
         }
     });
+
     return User;
 }
