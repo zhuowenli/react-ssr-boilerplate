@@ -10,7 +10,7 @@ import webpack from 'webpack';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
 import CleanPlugin from 'clean-webpack-plugin';
 import { SRC, APP, STATIC, CONFIG, STYLES, SERVER, ROOT } from './paths';
-import { isomorphicPlugin } from 'server/isomorphicTools';
+import { isomorphicPlugin } from '../src/server/isomorphicTools';
 
 export default {
     entry: {
@@ -20,7 +20,7 @@ export default {
         body: [
             'babel-polyfill',
             `${APP}/entry.js`,
-            `${STYLES}/main.scss`,
+            `${STYLES}/main.sass`,
         ],
     },
     output: {
@@ -59,8 +59,8 @@ export default {
         rules: [
             {
                 test: isomorphicPlugin.regular_expression('images'),
-                loader: 'url-loader',
-                options: { limit: 10240 },
+                loader: 'file-loader',
+                // options: { limit: 1024 },
             }, {
                 test: /\.woff2?(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url-loader',
@@ -72,10 +72,6 @@ export default {
             }, {
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
-            }, {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'url-loader',
-                options: { limit: 10000, mimetype: 'image/svg+xml' },
             },
         ],
     },

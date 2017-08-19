@@ -10,13 +10,12 @@ import { Component } from 'react';
 import DocumentMeta from 'react-helmet';
 import { Switch, Route } from 'react-router-dom';
 
-import HeadNavigation from 'app/components/HeadNavigation/nav';
 import Home from '../views/home';
 import Bar from '../views/bar';
 import Oops from '../views/oops';
 import Private from '../views/private';
 import NotFound from '../views/oops/404';
-import { Main, Content } from './App.styled';
+import { Main } from './App.styled';
 
 const log = debug('App.js');
 
@@ -33,17 +32,13 @@ export default class App extends Component {
                     <meta name='description' content='React SSR Boilerplate' />
                     <meta name='keywords' content='react,redux,react-router,koa,babel,es7,ssr,webpack' />
                 </DocumentMeta>
-                <HeadNavigation />
-                <h1>React SSR</h1>
-                <Content>
-                    <Switch>
-                        <Route path='/' exact component={Home}></Route>
-                        <Route path='/bar' component={Bar}></Route>
-                        <Route path='/oops' component={Oops}></Route>
-                        <Route path='/private' component={Private}></Route>
-                        <Route component={NotFound}></Route>
-                    </Switch>
-                </Content>
+                <Switch>
+                    <Route path='/' exact component={Home}></Route>
+                    <Route path='/bar' component={Bar}></Route>
+                    <Route path='/oops' component={Oops}></Route>
+                    <Route path='/private' component={Private}></Route>
+                    <Route component={NotFound}></Route>
+                </Switch>
             </Main>
         );
     }

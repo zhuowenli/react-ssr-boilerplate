@@ -8,3 +8,4 @@ webpack-assets.json
 *.log
 *.sublime-workspace
 untracked*
+dist

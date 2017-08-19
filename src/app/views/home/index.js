@@ -32,17 +32,21 @@ export default class Home extends Component {
         const { data } = this.props;
 
         return (
-            <section className='HomeRoute'>
-                {
-                    data.map((item, i) => (
-                        <article key={i}>
-                            <h2>{item.title}</h2>
-                            <p className='description'>{item.description}</p>
-                            <p className='content'>{item.content}</p>
-                        </article>
-                    ))
-                }
-            </section>
+            <div className='home'>
+                <header className='intro'>
+                    <div className='container'>
+                        {data.map(item => (
+                            <article key={item.id}>
+                                <h2>{item.title}</h2>
+                                <p>{item.content}</p>
+                            </article>
+                        ))}
+                    </div>
+                    <div className='shooting-star'>
+                        <img src={require('../../../assets/shooting-star.svg')} alt=''/>
+                    </div>
+                </header>
+            </div>
         );
     }
 }
