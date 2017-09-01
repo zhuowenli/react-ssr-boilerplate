@@ -26,15 +26,15 @@ React SSR Boilerplate is a github repository that helps anyone create new JavaSc
 
 ### Prerequsits
 
-Node.js.0+、Redis、PostgreSQL
+Node.js.0+、Redis、MySQL
 
 ### Quick Start
 
 1. install Node.js
-2. install Redis and PostgreSQL
+2. install Redis and MySQL
 3. create postgres database:
 
-    `{ database: 'server', owner: 'postgres', password: '123', host: '127.0.0.1' }`
+    `{ database: 'server', owner: 'root', password: '123456', host: '127.0.0.1' }`
 
 4. clone and start this project
 
@@ -148,7 +148,7 @@ React SSR Boilerplate uses the following libraries at its core:
 - [koa-router](https://github.com/alexmingoia/koa-router) - Router middleware for koa.
 - [socket.io](http://socket.io/) - A node engine for WebSocket communication.
 - [redux-via-socket.io](https://www.npmjs.com/package/redux-via-socket.io) - An adapter for sharing redux actions over WebSockets.
-- [Sequelize](http://docs.sequelizejs.com/) - Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects PostgreSQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
+- [Sequelize](http://docs.sequelizejs.com/) - Sequelize is a promise-based ORM for Node.js v4 and up. It supports the dialects MySQL, MySQL, SQLite and MSSQL and features solid transaction support, relations, read replication and more.
 
 ##### Universal Application
 - [react](http://facebook.github.io/react/) - A library for building interfaces.

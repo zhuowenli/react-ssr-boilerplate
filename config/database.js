@@ -6,12 +6,17 @@
 
 'use strict';
 
+const path = require('path');
+const loadEnv = require('node-env-file');
+
+loadEnv(path.resolve(__dirname, '../.env'), { raise: false });
+
 module.exports = {
-    username: process.env.DATABASE_USERNAME || 'postgres',
-    password: process.env.DATABASE_PASSWORD || '123',
-    database: process.env.DATABASE_NAME || 'server',
-    host: process.env.DATABASE_HOST || '127.0.0.1',
-    dialect: 'postgres',
+    username: process.env.DATABASE_USERNAME,
+    password: process.env.DATABASE_PASSWORD,
+    database: process.env.DATABASE_NAME,
+    host: process.env.DATABASE_HOST,
+    dialect: process.env.DATABASE_DIALECT,
     pool: {
         max: 10,
         min: 5,
