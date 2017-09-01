@@ -16,9 +16,13 @@
     "coverage": "scripty",
     "coverage:check": "babel-istanbul check-coverage",
     "deps_checker": "node scripts/deps_checker.js js ./package.json '(^\\.[\\s\\S]+|^dist|node_modules)'",
+    "db:seed": "sequelize db:seed:all",
+    "db:seed:undo": "sequelize db:seed:undo:all",
     "db:migrate": "sequelize db:migrate",
     "db:rollback": "sequelize db:migrate:undo",
-    "create:migration": "sequelize migration:create"
+    "db:migrate:undo": "sequelize db:migrate:undo",
+    "create:migration": "sequelize migration:create",
+    "create:seed": "sequelize seed:create"
   },
   "repository": {
     "type": "git",
@@ -116,7 +120,7 @@
     "yargs": "^8.0.1"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^7.2.3",
     "babel-istanbul": "^0.12.2",
     "babel-plugin-react-require": "^3.0.0",

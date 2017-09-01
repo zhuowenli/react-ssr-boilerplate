@@ -6,11 +6,16 @@
 
 'use strict';
 
+import fs from 'fs';
+import path from 'path';
 import models from '../server/models';
 
+const content = fs.readFileSync(path.join(__dirname, '../../README.md'), 'utf8');
+
 models.Article.create({
+    content,
     title: 'Readme',
-    content: '这是一条通过console插入的数据',
-    userId: 1,
+    user_id: 1,
     description: '🚀 React SSR Boilerplate — Node.js + MySQL + Koa2.x + React + React Router4.x + Redux + SSR',
+    release_at: '2017-09-01 12:00:00',
 });

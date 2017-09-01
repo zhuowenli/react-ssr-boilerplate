@@ -17,6 +17,7 @@ module.exports = {
     database: process.env.DATABASE_NAME,
     host: process.env.DATABASE_HOST,
     dialect: process.env.DATABASE_DIALECT,
+    seederStorage: 'sequelize',
     pool: {
         max: 10,
         min: 5,

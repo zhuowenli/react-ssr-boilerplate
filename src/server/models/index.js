@@ -9,9 +9,8 @@
 import fs from 'fs';
 import path from 'path';
 import Sequelize from 'sequelize';
-import database from '../../../config/database';
+import config from '../../../config/database';
 
-const config = database;
 const basename = path.basename(module.filename);
 const db = {};
 

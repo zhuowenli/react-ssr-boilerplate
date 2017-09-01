@@ -34,7 +34,7 @@ Node.js.0+、Redis、MySQL
 2. install Redis and MySQL
 3. create postgres database:
 
-    `{ database: 'server', owner: 'root', password: '123456', host: '127.0.0.1' }`
+    `{ database: 'server', order: 'utf8mb4_general_ci', owner: 'root', password: '123456', host: '127.0.0.1' }`
 
 4. clone and start this project
 
@@ -131,7 +131,7 @@ $ yarn console
 > models.User.findOne({ where: { email: '531840344@qq.com' } }).then(user => console.log(user.dataValues))
 
 # insert articles table
-> models.Article.create({title: 'Hello world!', content: '这是一条通过console插入的数据', user_id: 1, description: '相关描述'})
+> models.Article.create({title: 'Hello world!', content: '这是一条通过console插入的数据', user_id: 1, description: '相关描述', release_at: '2017-09-01 12:00:00'})
 ```
 
 ### Libraries
