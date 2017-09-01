@@ -25,12 +25,12 @@ describe('Home Actions', ()=> {
             expect(fetchArticles()).to.have.property('type', FETCH_ARTICLES);
         });
 
-        it('calls fetch with /api/articles', () => {
+        it('calls fetch with /api/articles/1', () => {
             fetchArticles();
-            expect(request.fetch).to.have.been.calledWith('/api/articles');
+            expect(request.fetch).to.have.been.calledWith('/api/articles/1');
         });
 
-        it('resolves the promise from fetching /api/articles', async() => {
+        it('resolves the promise from fetching /api/articles/1', async() => {
             const requestResolve = { some: 'data' };
             request.fetch.returns(Promise.resolve(requestResolve));
 

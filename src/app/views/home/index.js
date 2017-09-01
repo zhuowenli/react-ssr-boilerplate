@@ -9,18 +9,20 @@
 import { Component } from 'react';
 import { connect } from 'react-redux';
 import * as action from '../../actions/home';
+import {
+    Header,
+    Inner,
+} from './index.styled';
 
 const log = debug('home');
 
 @connect(({ homeReducer }) => ({
     data: homeReducer.data,
-    metadata: homeReducer.metadata,
 }), action)
 
 export default class Home extends Component {
     static defaultProps = {
-        data: [],
-        metadata: [],
+        data: {},
     };
 
     componentDidMount() {
@@ -33,19 +35,11 @@ export default class Home extends Component {
 
         return (
             <div className='home'>
-                <header className='intro'>
-                    <div className='container'>
-                        {data.map(item => (
-                            <article key={item.id}>
-                                <h2>{item.title}</h2>
-                                <p>{item.content}</p>
-                            </article>
-                        ))}
-                    </div>
-                    <div className='shooting-star'>
-                        <img src={require('../../../assets/shooting-star.svg')} alt=''/>
-                    </div>
-                </header>
+                <Header>
+                    <Inner>
+                        <h1>React</h1>
+                    </Inner>
+                </Header>
             </div>
         );
     }

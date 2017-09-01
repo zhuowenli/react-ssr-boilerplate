@@ -9,11 +9,11 @@
 import { fetch } from '../utils/request';
 import { FETCH_ARTICLES } from '../actions/types';
 
-export const fetchArticles = (page = 1) => {
+export const fetchArticles = (id = 1) => {
     return {
         type: FETCH_ARTICLES,
         payload: {
-            promise: fetch('/api/articles', { page, pre_page: 20 }),
+            promise: fetch(`/api/articles/${id}`),
         },
     };
 };

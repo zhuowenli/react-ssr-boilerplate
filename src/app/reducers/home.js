@@ -12,8 +12,7 @@ import { FETCH_ARTICLES } from '../actions/types';
 
 const initialState = {
     loading: false,
-    data: [],
-    metadata: {},
+    data: {},
 };
 
 export default typeToReducer({
@@ -26,11 +25,10 @@ export default typeToReducer({
             ...initialState,
             error: payload,
         }),
-        [FULFILLED]: (state, { payload }) => {
+        [FULFILLED]: (state, action) => {
             return {
                 ...initialState,
-                data: payload.data,
-                metadata: payload.metadata,
+                data: action.payload,
             };
         },
     },

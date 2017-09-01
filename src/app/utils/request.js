@@ -13,15 +13,15 @@ const log = debug('utils.request');
 export async function fetch(endpoint, options) {
     log('requesting', endpoint);
     const response = await (global || window).fetch(endpoint, options);
-    log('respsonse', { endpoint, status: response.status });
+    log('respsonse', { endpoint, response, status: response.status });
 
     if (response.status >= 400) {
         throw new Error(`Response error: ${endpoint}`);
     }
 
-    if (Number(response.headers.get('content-length')) <= 0) {
-        return null;
-    }
+    // if (Number(response.headers.get('content-length')) <= 0) {
+    //     return null;
+    // }
 
     const contentType = response.headers.get('content-type');
 
@@ -29,5 +29,3 @@ export async function fetch(endpoint, options) {
         ? response.json()
         : response.text();
 }
-
-// export default fetch;

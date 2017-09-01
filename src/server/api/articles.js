@@ -36,3 +36,11 @@ export async function fetchArticles(query = {}) {
         metadata: { page, count: articleCount, pre_page: limit },
     };
 }
+
+export async function fetchArticlesById(id) {
+    const data = await models.Article.findOne({
+        where: { id },
+    });
+
+    return data;
+}
