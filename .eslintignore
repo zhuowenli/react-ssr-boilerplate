@@ -2,3 +2,4 @@ src/static/*
 /node_modules/**
 **/*.snap
 **/loadCSS.js
+.vscode-upload.json
