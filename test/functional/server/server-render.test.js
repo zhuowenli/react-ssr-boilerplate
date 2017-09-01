@@ -8,7 +8,7 @@ import { routerMiddleware } from 'react-router-redux';
 import Helmet from 'react-helmet';
 import server from 'server-instance';
 import StaticRouter from 'server/components/StaticRouter';
-import { TESTS } from 'config/paths';
+import { TESTS } from '../../../config/paths';
 import { setRoutes, rootRouter } from 'server/router';
 import * as clientApp from 'app';
 
