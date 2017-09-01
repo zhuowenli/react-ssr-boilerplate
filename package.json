@@ -9,7 +9,7 @@
     "test:func": "scripty",
     "test:snap": "CHAI_JEST_SNAPSHOT_UPDATE_ALL=true npm run test:unit",
     "dev": "node ./src/server-entry.js",
-    "start": "NODE_ENV=production node ./src/server-entry.js",
+    "start": "pm2 start src/server-entry.js --name 'react-ssr-server'",
     "console": "NODE_ENV=console node ./src/server-entry.js console",
     "build": "scripty",
     "lint": "eslint src scripts test --ext .js",

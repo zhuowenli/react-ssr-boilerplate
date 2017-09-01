@@ -66,7 +66,7 @@ Node.js.0+、Redis、MySQL
 **Developing**
 
 ```bash
-$ npm run dev
+yarn dev
 ```
 
 Builds and serves app with hot reloading and debugging support.
@@ -74,7 +74,7 @@ Builds and serves app with hot reloading and debugging support.
 **Build client-side app**
 
 ```
-npm run build
+yarn build
 ```
 
 Creates bundles and assets into `./src/static` directory. Reads `.env` but always uses production Webpack configuration.
@@ -84,7 +84,8 @@ Creates bundles and assets into `./src/static` directory. Reads `.env` but alway
 Set the NODE_ENV flag to production in your .env file.
 
 ```
-npm run start
+yarn global add pm2
+yarn start
 ```
 
 Expects bundles and assets to exist in the `./src/static` directory. Runs the server in production mode.
@@ -92,7 +93,7 @@ Expects bundles and assets to exist in the `./src/static` directory. Runs the se
 **Unit test development server**
 
 ```
-npm run test:server
+yarn test:server
 ```
 
 Start a test server using Mocha and Webpack-middleware. Provides a browser based testing environment. Loading tests from within `./src` where extension is `.test.js`.
@@ -101,7 +102,7 @@ Start a test server using Mocha and Webpack-middleware. Provides a browser based
 **Unit test single run**
 
 ```
-npm run test:unit
+yarn test:unit
 ```
 
 Runs the test suite in a node environment through mocha, once.
@@ -109,7 +110,7 @@ Runs the test suite in a node environment through mocha, once.
 **Functional/integration tests run**
 
 ```
-npm run test:func
+yarn test:func
 ```
 
 Runs functional tests inside `./test/functional` directory.
@@ -117,7 +118,7 @@ Runs functional tests inside `./test/functional` directory.
 **Lint**
 
 ```
-npm run lint
+yarn lint
 ```
 
 Reads `.eslintrc` for linting configurations.
@@ -125,8 +126,8 @@ Reads `.eslintrc` for linting configurations.
 **Coverage**
 
 ```
-npm run coverage
-npm run coverage:check
+yarn coverage
+yarn coverage:check
 ```
 
 ### Console
