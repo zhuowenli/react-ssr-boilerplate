@@ -9,3 +9,4 @@ webpack-assets.json
 *.sublime-workspace
 untracked*
 dist
+.vscode-upload.json

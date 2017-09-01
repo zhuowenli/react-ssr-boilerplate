@@ -1,3 +1,11 @@
+/*
+ * @Author: 卓文理
+ * @Email: 531840344@qq.com
+ * @Date: 2017-09-01 17:00:46
+ */
+
+'use strict';
+
 import '../config/environment';
 import Koa from 'koa';
 import webpack from 'webpack';
