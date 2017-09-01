@@ -3501,11 +3501,11 @@ humanize-number@0.0.2:
   version "0.0.2"
   resolved "http://registry.npm.taobao.org/humanize-number/download/humanize-number-0.0.2.tgz#11c0af6a471643633588588048f1799541489c18"
 
-iconv-lite@0.4.13, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
+iconv-lite@0.4.13:
   version "0.4.13"
   resolved "http://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.13.tgz#1f88aba4ab0b1508e8312acc39345f36e992e2f2"
 
-iconv-lite@0.4.18, iconv-lite@^0.4.17, iconv-lite@^0.4.18:
+iconv-lite@0.4.18, iconv-lite@^0.4.17, iconv-lite@^0.4.18, iconv-lite@^0.4.4, iconv-lite@~0.4.13:
   version "0.4.18"
   resolved "http://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.18.tgz#23d8656b16aae6742ac29732ea8f0336a4789cf2"
 
@@ -4625,11 +4625,7 @@ lower-case@^1.1.1:
   version "1.1.4"
   resolved "http://registry.npm.taobao.org/lower-case/download/lower-case-1.1.4.tgz#9a2cabd1b9e8e0ae993a4bf7d5875c39c42e8eac"
 
-lru-cache@2:
-  version "2.7.3"
-  resolved "http://registry.npm.taobao.org/lru-cache/download/lru-cache-2.7.3.tgz#6d4524e8b955f95d4f5b58851ce21dd72fb4e952"
-
-lru-cache@2.5.0:
+lru-cache@2, lru-cache@2.5.0:
   version "2.5.0"
   resolved "http://registry.npm.taobao.org/lru-cache/download/lru-cache-2.5.0.tgz#d82388ae9c960becbea0c73bb9eb79b6c6ce9aeb"
 
@@ -6057,12 +6053,6 @@ rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-bem-helper@^1.4.1:
-  version "1.4.1"
-  resolved "http://registry.npm.taobao.org/react-bem-helper/download/react-bem-helper-1.4.1.tgz#cb27aeadda020e9fe9d169bfaae1095c559f4cf5"
-  dependencies:
-    object-assign "^4.1.1"
-
 react-deep-force-update@^1.0.0:
   version "1.0.1"
   resolved "http://registry.npm.taobao.org/react-deep-force-update/download/react-deep-force-update-1.0.1.tgz#f911b5be1d2a6fe387507dd6e9a767aa2924b4c7"
@@ -6231,7 +6221,7 @@ readable-stream@1.0, "readable-stream@>=1.0.33-1 <1.1.0-0":
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-readable-stream@2.3.2:
+readable-stream@2.3.2, readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.6:
   version "2.3.2"
   resolved "http://registry.npm.taobao.org/readable-stream/download/readable-stream-2.3.2.tgz#5a04df05e4f57fe3f0dc68fdd11dc5c97c7e6f4d"
   dependencies:
@@ -6241,18 +6231,6 @@ readable-stream@2.3.2:
     process-nextick-args "~1.0.6"
     safe-buffer "~5.1.0"
     string_decoder "~1.0.0"
-    util-deprecate "~1.0.1"
-
-readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.0.6, readable-stream@^2.1.4, readable-stream@^2.1.5, readable-stream@^2.2.2, readable-stream@^2.2.6:
-  version "2.3.3"
-  resolved "http://registry.npm.taobao.org/readable-stream/download/readable-stream-2.3.3.tgz#368f2512d79f9d46fdfc71349ae7878bbc1eb95c"
-  dependencies:
-    core-util-is "~1.0.0"
-    inherits "~2.0.3"
-    isarray "~1.0.0"
-    process-nextick-args "~1.0.6"
-    safe-buffer "~5.1.1"
-    string_decoder "~1.0.3"
     util-deprecate "~1.0.1"
 
 readable-stream@~1.1.9:
@@ -6590,7 +6568,7 @@ rx-lite@*, rx-lite@^4.0.8:
   version "4.0.8"
   resolved "http://registry.npm.taobao.org/rx-lite/download/rx-lite-4.0.8.tgz#0b1e11af8bc44836f04a6407e92da42467b79444"
 
-safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@~5.1.0:
   version "5.1.1"
   resolved "http://registry.npm.taobao.org/safe-buffer/download/safe-buffer-5.1.1.tgz#893312af69b2123def71f57889001671eeb2c853"
 
@@ -7025,7 +7003,7 @@ string_decoder@^0.10.25, string_decoder@~0.10.x:
   version "0.10.31"
   resolved "http://registry.npm.taobao.org/string_decoder/download/string_decoder-0.10.31.tgz#62e203bc41766c6c28c9fc84301dab1c5310fa94"
 
-string_decoder@~1.0.0, string_decoder@~1.0.3:
+string_decoder@~1.0.0:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/string_decoder/download/string_decoder-1.0.3.tgz#0fc67d7c141825de94282dd536bec6b9bce860ab"
   dependencies:

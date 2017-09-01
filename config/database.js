@@ -22,4 +22,6 @@ module.exports = {
         min: 5,
         idle: 30000,
     },
+    // 修复中国时区问题
+    timezone: '+08:00',
 };

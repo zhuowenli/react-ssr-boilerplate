@@ -7,11 +7,15 @@
 'use strict';
 
 module.exports = {
-    up(queryInterface, Sequelize) {
+    up(queryInterface, DataTypes) {
         return queryInterface.addColumn(
             'articles',
             'description',
-            Sequelize.STRING
+            {
+                type: DataTypes.STRING,
+                allowNull: true,
+                comment: '文章简介',
+            }
         );
     },
 

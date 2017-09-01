@@ -14,10 +14,6 @@ export default function(sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true,
         },
-        userId: {
-            type: DataTypes.INTEGER,
-            field: 'user_id',
-        },
         title: {
             type: DataTypes.STRING,
             allowNull: false,
@@ -25,6 +21,30 @@ export default function(sequelize, DataTypes) {
                 notEmpty: true,
                 len: [ 1, 100 ],
             },
+        },
+        content: {
+            type: DataTypes.TEXT,
+            allowNull: false,
+            validate: {
+                notEmpty: true,
+            },
+        },
+        status: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
+        like_count: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0,
+        },
+        view_count: {
+            type: DataTypes.INTEGER,
+            defaultValue: 0,
         },
         description: {
             type: DataTypes.STRING,
@@ -34,12 +54,8 @@ export default function(sequelize, DataTypes) {
                 len: [ 1, 250 ],
             },
         },
-        content: {
-            type: DataTypes.TEXT,
-            allowNull: false,
-            validate: {
-                notEmpty: true,
-            },
+        release_at: {
+            type: DataTypes.DATE,
         },
     },{
         underscored: true,

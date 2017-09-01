@@ -23,6 +23,10 @@ export default function(sequelize, DataTypes) {
                 len: [ 1, 50 ],
             },
         },
+        avatar_url: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
         email: {
             type: DataTypes.STRING,
             unique: true,
@@ -34,6 +38,11 @@ export default function(sequelize, DataTypes) {
             set(val) {
                 this.setDataValue('email', val.toLowerCase());
             },
+        },
+        status: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            defaultValue: 0,
         },
         passwordDigest: {
             type: DataTypes.STRING,

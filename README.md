@@ -38,13 +38,13 @@ Node.js.0+、Redis、MySQL
 
 4. clone and start this project
 
-    ```
-    git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
-    cd <directory-name>
-    yarn
-    mv example.env .env
-    yarn db:migrate
-    yarn dev
+    ```bash
+    $ git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
+    $ cd <directory-name>
+    $ yarn
+    $ mv example.env .env
+    $ yarn db:migrate
+    $ yarn dev
     ```
 
     With the default `.env` file, this will start your application in development mode on port 9001. It also provides a configuration for running the debugger with a useful console output.
@@ -55,8 +55,8 @@ Node.js.0+、Redis、MySQL
 
 **Developing**
 
-```
-npm run dev
+```bash
+$ npm run dev
 ```
 
 Builds and serves app with hot reloading and debugging support.
@@ -125,13 +125,13 @@ npm run coverage:check
 $ yarn console
 
 # insert users table
-> models.User.create({name: '张三', email: '123456@qq.com', password: '12345678', passwordConfirmation: '12345678'})
+> models.User.create({name: '卓文理', email: '531840344@qq.com', password: '12345678', passwordConfirmation: '12345678'})
 
 # search users table
-> models.User.findOne({ where: { email: '123456@qq.com' } }).then(user => console.log(user.dataValues))
+> models.User.findOne({ where: { email: '531840344@qq.com' } }).then(user => console.log(user.dataValues))
 
 # insert articles table
-> models.Article.create({title: 'Hello world!', content: '这是一条通过console插入的数据', userId: 1, description: '相关描述'})
+> models.Article.create({title: 'Hello world!', content: '这是一条通过console插入的数据', user_id: 1, description: '相关描述'})
 ```
 
 ### Libraries

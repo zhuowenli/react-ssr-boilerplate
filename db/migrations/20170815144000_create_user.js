@@ -7,27 +7,46 @@
 'use strict';
 
 module.exports = {
-    up(queryInterface, Sequelize) {
+    up(queryInterface, DataTypes) {
         return queryInterface.createTable('users', {
             id: {
-                type: Sequelize.INTEGER,
+                type: DataTypes.INTEGER,
                 primaryKey: true,
                 autoIncrement: true,
             },
             name: {
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
+                allowNull: false,
+                comment: '用户名',
             },
             email: {
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
+                allowNull: false,
+                comment: '邮箱',
+            },
+            avatar_url: {
+                type: DataTypes.STRING,
+                allowNull: true,
+                comment: '用户头像',
             },
             password_digest: {
-                type: Sequelize.STRING,
+                type: DataTypes.STRING,
+                allowNull: false,
+                comment: '密码',
+            },
+            status: {
+                type: DataTypes.INTEGER,
+                allowNull: false,
+                defaultValue: 0,
+                comment: '状态',
             },
             created_at: {
-                type: Sequelize.DATE,
+                type: DataTypes.DATE,
+                comment: '创建时间',
             },
             updated_at: {
-                type: Sequelize.DATE,
+                type: DataTypes.DATE,
+                comment: '更新时间',
             },
         });
     },
