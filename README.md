@@ -39,12 +39,22 @@ Node.js.0+、Redis、MySQL
 4. clone and start this project
 
     ```bash
-    $ git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
-    $ cd <directory-name>
-    $ yarn
-    $ mv example.env .env
-    $ yarn db:migrate
-    $ yarn dev
+    # clone
+    git clone git@github.com:zhuowenli/react-ssr-boilerplate.git <directory-name>
+    cd <directory-name>
+
+    # install deps
+    yarn
+
+    # create .env
+    mv example.env .env
+
+    # init database
+    yarn db:migrate
+    yarn db:seed
+
+    # start!
+    yarn dev
     ```
 
     With the default `.env` file, this will start your application in development mode on port 9001. It also provides a configuration for running the debugger with a useful console output.
